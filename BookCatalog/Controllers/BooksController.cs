@@ -91,7 +91,7 @@ namespace Lab5.Controllers
                  myBook.State= ubb.UserBook.State;
                 _context.Update(myBook);
                 _context.SaveChanges();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(MyBooks));
             }
             else
             {
@@ -99,7 +99,7 @@ namespace Lab5.Controllers
               
                     _context.Add(ubb.UserBook);
                     await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
+                    return RedirectToAction(nameof(MyBooks));
                
             }
         }

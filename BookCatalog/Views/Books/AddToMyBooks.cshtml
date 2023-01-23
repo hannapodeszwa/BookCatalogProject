@@ -40,15 +40,18 @@
                 <input asp-for="UserBook.BookId" class="form-control" hidden=true />
                 <span asp-validation-for="UserBook.BookId" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <label asp-for="UserBook.State" class="control-label"></label>
+                <br />
                 <select asp-for="UserBook.State"
                         asp-items="@(ViewData["StatesList"] as SelectList)">
                 </select>
                 <span asp-validation-for="UserBook.State" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="AddToMyBooks" class="btn btn-primary" />
             </div>
         </form>
     </div>
